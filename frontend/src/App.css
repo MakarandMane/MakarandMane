@@ -680,6 +680,97 @@ section { scroll-margin-top: 88px; }
 .mk-textarea { min-height: 140px; resize: vertical; }
 .mk-form .btn { margin-top: 8px; width: fit-content; }
 
+/* ---------- Discovery card (new contact section) ---------- */
+.mk-discovery {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.mk-discovery-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+.mk-discovery-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -30% -50% auto;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(closest-side, rgba(201, 138, 59, 0.10), transparent 70%);
+  pointer-events: none;
+}
+.mk-discovery-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--accent);
+  color: #fff;
+  margin-bottom: 22px;
+  position: relative;
+}
+.mk-discovery-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 12px;
+  position: relative;
+}
+.mk-discovery-card p {
+  color: var(--ink-2);
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 24px;
+  position: relative;
+}
+.mk-discovery-card .btn { position: relative; }
+.mk-discovery-micro {
+  margin-top: 18px !important;
+  font-size: 13.5px !important;
+  color: var(--muted) !important;
+}
+.mk-discovery-micro a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.mk-discovery-micro a:hover {
+  color: var(--accent-ink);
+  border-bottom-color: var(--accent);
+}
+
+/* Make blog post anchor tags behave like the article cards did */
+a.mk-post { color: inherit; text-decoration: none; }
+
+/* Footer versions inline links */
+.mk-footer-versions a {
+  color: var(--ink-2);
+  border-bottom: 1px dotted var(--rule);
+  transition: color 200ms ease, border-color 200ms ease;
+  padding-bottom: 1px;
+}
+.mk-footer-versions a:hover {
+  color: var(--accent-ink);
+  border-bottom-color: var(--accent);
+}
+
+@media (max-width: 1024px) {
+  .mk-discovery { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 720px) {
+  .mk-discovery-card { padding: 30px 26px; }
+  .mk-discovery-title { font-size: 24px; }
+}
+
 /* ---------- Footer ---------- */
 .mk-footer {
   border-top: 1px solid var(--rule);
