@@ -215,9 +215,9 @@ export default function MakarandMinimal() {
         <footer className="mkm-footer">
           <span>© 2026 Makarand Mane</span>
           <span className="dot">·</span>
-          <Link to="/">Premium</Link>
+          <Link to="/">Sidebar (primary)</Link>
           <span className="dot">·</span>
-          <Link to="/sidebar">Sidebar</Link>
+          <Link to="/premium">Premium</Link>
           <span className="dot">·</span>
           <Link to="/blog">Blog</Link>
         </footer>

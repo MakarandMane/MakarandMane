@@ -381,7 +381,7 @@ function Footer() {
       <div className="mk-container mk-footer-inner">
         <span>© 2026 Makarand Mane. All rights reserved.</span>
         <span className="mk-footer-versions">
-          View other versions: <Link to="/minimal">Minimal</Link> · <Link to="/sidebar">Sidebar</Link> · <Link to="/blog">Blog</Link>
+          View other versions: <Link to="/">Sidebar (primary)</Link> · <Link to="/minimal">Minimal</Link> · <Link to="/blog">Blog</Link>
         </span>
       </div>
     </footer>

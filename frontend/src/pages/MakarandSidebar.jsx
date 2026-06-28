@@ -26,6 +26,8 @@ function Sidebar() {
         <a
           className="mks-discovery-cta"
           href={DISCOVERY_CALL_URL}
+          target="_blank"
+          rel="noreferrer"
           data-testid="sidebar-discovery-cta"
         >
           <Calendar size={15} strokeWidth={2} />
@@ -62,9 +64,9 @@ function Sidebar() {
         </div>
 
         <div className="mks-versions">
-          <span className="mks-versions-label">View other versions</span>
+          <span className="mks-versions-label">Other versions</span>
           <div className="mks-versions-links">
-            <Link to="/">Premium</Link>
+            <Link to="/premium">Premium</Link>
             <span>·</span>
             <Link to="/minimal">Minimal</Link>
           </div>
@@ -104,7 +106,7 @@ export default function MakarandSidebar() {
             </p>
 
             <div className="mks-cta-row">
-              <a className="mks-cta-primary" href={DISCOVERY_CALL_URL} data-testid="intro-discovery-cta">
+              <a className="mks-cta-primary" href={DISCOVERY_CALL_URL} target="_blank" rel="noreferrer" data-testid="intro-discovery-cta">
                 <Calendar size={15} /> Book a Discovery Call
               </a>
               <a className="mks-cta-ghost" href="https://wpgenius.in/" target="_blank" rel="noreferrer">
@@ -243,7 +245,7 @@ export default function MakarandSidebar() {
               a quiet, capable developer in your corner — book a short call. Worst case you walk
               away with a clearer view of your own setup.
             </p>
-            <a className="mks-cta-primary big" href={DISCOVERY_CALL_URL} data-testid="footer-discovery-cta">
+            <a className="mks-cta-primary big" href={DISCOVERY_CALL_URL} target="_blank" rel="noreferrer" data-testid="footer-discovery-cta">
               <Calendar size={16} /> Book a Discovery Call
             </a>
             <p className="mks-microcopy">

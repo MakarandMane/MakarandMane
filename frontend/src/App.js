@@ -12,10 +12,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MakarandLanding />} />
-        <Route path="/minimal" element={<MakarandMinimal />} />
-        <Route path="/sidebar" element={<MakarandSidebar />} />
+        {/* v3 sidebar is now the primary site */}
+        <Route path="/" element={<MakarandSidebar />} />
         <Route path="/blog" element={<BlogIndex />} />
+        {/* Reference variants */}
+        <Route path="/premium" element={<MakarandLanding />} />
+        <Route path="/minimal" element={<MakarandMinimal />} />
       </Routes>
     </BrowserRouter>
   );

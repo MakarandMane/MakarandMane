@@ -1,8 +1,7 @@
 // Real blog posts from makarandmane.com/blog
 // Used by /blog index and writing previews across all three landing variants.
 
-export const DISCOVERY_CALL_URL =
-  "mailto:makarand@wpgenius.in?subject=Book%20a%20Discovery%20Call&body=Hi%20Makarand%2C%0A%0AI%27d%20like%20to%20book%20a%20discovery%20call.%20A%20few%20details%3A%0A%0A-%20Project%2Fbusiness%3A%0A-%20Current%20stack%3A%0A-%20Goals%2Ftimeline%3A%0A%0AThanks%21";
+export const DISCOVERY_CALL_URL = "https://app.reclaim.ai/m/wpgenius/quick-meeting";
 
 export const POSTS = [
   {

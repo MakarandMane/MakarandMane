@@ -26,9 +26,9 @@ export default function BlogIndex() {
           <ArrowLeft size={14} /> Back home
         </Link>
         <nav className="blog-topnav">
-          <Link to="/">Premium</Link>
+          <Link to="/">Home (Sidebar)</Link>
+          <Link to="/premium">Premium</Link>
           <Link to="/minimal">Minimal</Link>
-          <Link to="/sidebar">Sidebar</Link>
         </nav>
       </header>
 
