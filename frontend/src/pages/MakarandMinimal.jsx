@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
+import { FEATURED_POSTS, DISCOVERY_CALL_URL } from "@/data/blogPosts";
 
 /* Minimal, essay-style personal page.
    Inspired by abhaykulkarni.com + vallabhchitnis.com.
@@ -22,11 +24,12 @@ export default function MakarandMinimal() {
   return (
     <main className="mkm-page" data-testid="minimal-page">
       <header className="mkm-top">
-        <a href="/" className="mkm-brand">Makarand Mane</a>
+        <Link to="/" className="mkm-brand">Makarand Mane</Link>
         <nav className="mkm-topnav">
           <a href="#work">Work</a>
           <a href="#community">Community</a>
           <a href="#writing">Writing</a>
+          <Link to="/blog">Blog</Link>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -59,11 +62,17 @@ export default function MakarandMinimal() {
           </p>
 
           <div className="mkm-cta-row">
-            <a className="mkm-cta-primary" href="#contact">Get in touch</a>
+            <a className="mkm-cta-primary" href={DISCOVERY_CALL_URL} data-testid="minimal-discovery-cta">
+              <Calendar size={14} />
+              Book a Discovery Call
+            </a>
             <a className="mkm-cta-ghost" href="https://wpgenius.in/" target="_blank" rel="noreferrer">
               Visit WPGenius <ArrowUpRight size={14} />
             </a>
           </div>
+          <p className="mkm-muted small" style={{ marginTop: 10 }}>
+            30-minute call · No pitch deck · Bring your problem, not a brief.
+          </p>
         </section>
 
         <hr className="mkm-rule" />
@@ -136,53 +145,53 @@ export default function MakarandMinimal() {
             to pay that back.
           </p>
           <ul className="mkm-list">
-            <li>Speaker &amp; organizer at WordPress meetups</li>
-            <li>Volunteer &amp; contributor at WordCamps across India</li>
+            <li>Speaker — WordCamp Bengaluru 2025</li>
+            <li>Organizing team — WordCamp Asia 2026</li>
+            <li>Volunteer &amp; contributor across multiple WordCamps and meetups</li>
             <li>Long-time advocate for clean, maintainable open source</li>
           </ul>
-          <p className="mkm-muted small">
-            <em>Want specific WordCamps featured here? Send me the list and I&rsquo;ll link them.</em>
-          </p>
         </section>
 
         <hr className="mkm-rule" />
 
         {/* Writing */}
         <section id="writing" className="mkm-section">
-          <h2 className="mkm-h2">Writing</h2>
-          <p className="mkm-muted">Occasional notes on development, WordPress, and community.</p>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 16, marginBottom: 8, flexWrap: "wrap" }}>
+            <h2 className="mkm-h2" style={{ margin: 0 }}>Writing</h2>
+            <Link to="/blog" className="mkm-link" style={{ fontSize: 13 }}>All posts <ArrowUpRight size={12} /></Link>
+          </div>
+          <p className="mkm-muted">Notes from real work, contribution, and learning.</p>
           <ol className="mkm-essays">
-            <li>
-              <a href="#" className="mkm-essay-link">
-                <span className="mkm-essay-title">My Journey with WordPress Since 2011</span>
-                <span className="mkm-essay-meta">Essay · WordPress</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="mkm-essay-link">
-                <span className="mkm-essay-title">What Community Events Teach Developers</span>
-                <span className="mkm-essay-meta">Notes · Community</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="mkm-essay-link">
-                <span className="mkm-essay-title">Why Website Maintenance Matters After Launch</span>
-                <span className="mkm-essay-meta">Guide · Maintenance</span>
-              </a>
-            </li>
+            {FEATURED_POSTS.map((p) => (
+              <li key={p.slug}>
+                <a href={p.url} target="_blank" rel="noreferrer" className="mkm-essay-link">
+                  <span className="mkm-essay-title">{p.title}</span>
+                  <span className="mkm-essay-meta">{p.date} · {p.category}</span>
+                </a>
+              </li>
+            ))}
           </ol>
         </section>
 
         <hr className="mkm-rule" />
 
-        {/* Contact */}
+        {/* Discovery call */}
         <section id="contact" className="mkm-section">
-          <h2 className="mkm-h2">Get in touch</h2>
+          <h2 className="mkm-h2">Let&rsquo;s see if we&rsquo;re a fit.</h2>
           <p>
-            If you need help with <b>WordPress</b>, <b>Shopify</b>, <b>maintenance</b>, or
-            <b> technical consulting</b> — I&rsquo;d be glad to connect. Send a short note about
-            your stack, goals, and timeline.
+            If you&rsquo;re running a business that depends on <b>WordPress</b> or <b>Shopify</b>,
+            and you&rsquo;d like a quiet, capable developer in your corner — book a short call.
+            Worst case you walk away with a clearer view of your own setup.
           </p>
+          <div className="mkm-cta-row" style={{ marginTop: 8 }}>
+            <a className="mkm-cta-primary" href={DISCOVERY_CALL_URL} data-testid="minimal-final-cta">
+              <Calendar size={14} />
+              Book a Discovery Call
+            </a>
+            <a className="mkm-cta-ghost" href="mailto:makarand@wpgenius.in">
+              Or email me
+            </a>
+          </div>
           <ul className="mkm-contact">
             <li>
               <span className="mkm-k">Email</span>
@@ -206,7 +215,11 @@ export default function MakarandMinimal() {
         <footer className="mkm-footer">
           <span>© 2026 Makarand Mane</span>
           <span className="dot">·</span>
-          <a href="/">Premium version</a>
+          <Link to="/">Premium</Link>
+          <span className="dot">·</span>
+          <Link to="/sidebar">Sidebar</Link>
+          <span className="dot">·</span>
+          <Link to="/blog">Blog</Link>
         </footer>
       </article>
     </main>

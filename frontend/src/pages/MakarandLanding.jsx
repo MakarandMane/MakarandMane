@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -7,10 +8,11 @@ import {
   CalendarCheck2,
   Award,
   Mic2,
-  Wrench,
+  Calendar,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
+import { FEATURED_POSTS, DISCOVERY_CALL_URL } from "@/data/blogPosts";
 
 /* ---------- Fade-up on scroll (IntersectionObserver) ---------- */
 function useReveal() {
@@ -61,7 +63,7 @@ function Header() {
           <a href="#services" data-testid="nav-services">Services</a>
           <a href="#blog" data-testid="nav-blog">Blog</a>
           <a href="#contact" data-testid="nav-contact">Contact</a>
-          <a href="#contact" className="mk-cta" data-testid="nav-cta">Hire Me</a>
+          <a href={DISCOVERY_CALL_URL} className="mk-cta" data-testid="nav-cta">Book a Call</a>
         </nav>
         <label htmlFor="mk-burger" className="mk-burger-btn" aria-label="Open menu" data-testid="mobile-menu-toggle">
           <span />
@@ -74,7 +76,7 @@ function Header() {
           <a href="#services" onClick={close}>Services</a>
           <a href="#blog" onClick={close}>Blog</a>
           <a href="#contact" onClick={close}>Contact</a>
-          <a href="#contact" className="mk-cta" onClick={close}>Hire Me</a>
+          <a href={DISCOVERY_CALL_URL} className="mk-cta" onClick={close}>Book a Call</a>
         </div>
       </div>
     </header>
@@ -100,13 +102,13 @@ function Hero() {
             and practical technical solutions that are stable, clean, and maintainable.
           </p>
           <div className="mk-hero-actions fade-up d3">
-            <a href="#about" className="btn btn-primary" data-testid="hero-cta-primary">
+            <a href={DISCOVERY_CALL_URL} className="btn btn-primary" data-testid="hero-cta-primary">
+              <Calendar size={16} strokeWidth={2} />
+              Book a Discovery Call
+            </a>
+            <a href="#about" className="btn btn-ghost" data-testid="hero-cta-secondary">
               Learn More About Me
               <ArrowRight className="arrow" size={17} strokeWidth={2} />
-            </a>
-            <a href="#contact" className="btn btn-ghost" data-testid="hero-cta-secondary">
-              Contact Me
-              <ArrowUpRight className="arrow" size={17} strokeWidth={2} />
             </a>
           </div>
 
@@ -265,29 +267,6 @@ function Services() {
 
 /* ---------- Blog ---------- */
 function Blog() {
-  const posts = [
-    {
-      tag: "WordPress",
-      title: "My Journey with WordPress Since 2011",
-      content:
-        "Reflections on development, contribution, and how the ecosystem has shaped my work.",
-      date: "Essay",
-    },
-    {
-      tag: "Community",
-      title: "What Community Events Teach Developers",
-      content:
-        "How speaking, volunteering, and meetups strengthen both technical and human skills.",
-      date: "Notes",
-    },
-    {
-      tag: "Maintenance",
-      title: "Why Website Maintenance Matters After Launch",
-      content:
-        "A practical view on updates, performance, stability, and long-term digital reliability.",
-      date: "Guide",
-    },
-  ];
   return (
     <section id="blog" className="mk-section" data-testid="blog-section">
       <div className="mk-container">
@@ -300,109 +279,95 @@ function Blog() {
         </div>
 
         <div className="mk-blog-grid">
-          {posts.map((p, i) => (
-            <article key={p.title} className={`mk-post fade-up d${i + 1}`} data-testid={`blog-post-${i + 1}`}>
+          {FEATURED_POSTS.map((p, i) => (
+            <a
+              key={p.slug}
+              href={p.url}
+              target="_blank"
+              rel="noreferrer"
+              className={`mk-post fade-up d${i + 1}`}
+              data-testid={`blog-post-${i + 1}`}
+            >
               <div className="meta">
-                <span className="tag">{p.tag}</span>
+                <span className="tag">{p.category}</span>
                 <span>{p.date}</span>
               </div>
               <h3>{p.title}</h3>
-              <p>{p.content}</p>
-              <a href="#" className="mk-readmore" data-testid={`blog-readmore-${i + 1}`}>
+              <p>{p.excerpt}</p>
+              <span className="mk-readmore" data-testid={`blog-readmore-${i + 1}`}>
                 Read More <ArrowRight size={15} strokeWidth={2} />
-              </a>
-            </article>
+              </span>
+            </a>
           ))}
+        </div>
+
+        <div className="fade-up" style={{ marginTop: 36, textAlign: "center" }}>
+          <Link to="/blog" className="btn btn-ghost" data-testid="view-all-posts">
+            View all posts <ArrowUpRight size={15} />
+          </Link>
         </div>
       </div>
     </section>
   );
 }
 
-/* ---------- Contact ---------- */
+/* ---------- Discovery Call (was Contact) ---------- */
 function Contact() {
-  const [sent, setSent] = useState(false);
-  const formRef = useRef(null);
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    setSent(true);
-    formRef.current?.reset();
-    setTimeout(() => setSent(false), 4000);
-  };
-
   return (
     <section id="contact" className="mk-section mk-contact" data-testid="contact-section">
       <div className="mk-container">
         <div className="mk-section-head fade-up">
-          <span className="mk-label">Contact</span>
-          <h2 className="mk-section-title">Let's build something reliable.</h2>
+          <span className="mk-label">Work with me</span>
+          <h2 className="mk-section-title">Let&rsquo;s see if we&rsquo;re a fit.</h2>
           <p className="mk-section-intro">
-            If you need help with WordPress, Shopify, website maintenance, or technical consulting,
-            I'd be glad to connect.
+            If you&rsquo;re running a business that depends on WordPress or Shopify and you&rsquo;d like
+            a quiet, capable developer in your corner — book a short call. Worst case you walk away
+            with a clearer view of your own setup.
           </p>
         </div>
 
-        <div className="mk-contact-grid">
-          <div className="mk-contact-info fade-up d1">
+        <div className="mk-discovery">
+          <div className="mk-discovery-card fade-up d1">
+            <div className="mk-discovery-icon">
+              <Calendar size={26} strokeWidth={1.5} />
+            </div>
+            <h3 className="mk-discovery-title">Discovery Call</h3>
             <p>
-              Share a few details about your project — current stack, goals, and timelines. I'll get
-              back with a thoughtful, honest reply.
+              30-minute call · No pitch deck · Bring your problem, not a brief. We&rsquo;ll talk
+              about your stack, your goals, and whether I&rsquo;m the right person to help.
             </p>
-            <ul className="mk-contact-details">
-              <li>
-                <span className="ic"><Mail size={18} strokeWidth={1.7} /></span>
-                <div>
-                  <span className="k">Email</span>
-                  <a href="mailto:makarand@wpgenius.in" className="v" data-testid="contact-email">
-                    makarand@wpgenius.in
-                  </a>
-                </div>
-              </li>
-              <li>
-                <span className="ic"><MapPin size={18} strokeWidth={1.7} /></span>
-                <div>
-                  <span className="k">Location</span>
-                  <span className="v">Kolhapur, India</span>
-                </div>
-              </li>
-              <li>
-                <span className="ic"><Sparkles size={18} strokeWidth={1.7} /></span>
-                <div>
-                  <span className="k">Availability</span>
-                  <span className="v">Open for project discussions</span>
-                </div>
-              </li>
-            </ul>
+            <a href={DISCOVERY_CALL_URL} className="btn btn-primary" data-testid="discovery-cta">
+              <Calendar size={16} />
+              Book a Discovery Call
+            </a>
+            <p className="mk-discovery-micro">
+              Or write directly: <a href="mailto:makarand@wpgenius.in" data-testid="contact-email">makarand@wpgenius.in</a>
+            </p>
           </div>
 
-          <form ref={formRef} className="mk-form fade-up d2" onSubmit={onSubmit} data-testid="contact-form">
-            <div className="mk-form-row">
-              <div className="mk-field">
-                <label htmlFor="name">Your Name</label>
-                <input id="name" name="name" required className="mk-input" placeholder="e.g. Priya Sharma" data-testid="contact-name" />
+          <ul className="mk-contact-details fade-up d2">
+            <li>
+              <span className="ic"><Mail size={18} strokeWidth={1.7} /></span>
+              <div>
+                <span className="k">Email</span>
+                <a href="mailto:makarand@wpgenius.in" className="v">makarand@wpgenius.in</a>
               </div>
-              <div className="mk-field">
-                <label htmlFor="email">Email Address</label>
-                <input id="email" name="email" type="email" required className="mk-input" placeholder="you@company.com" data-testid="contact-email-input" />
+            </li>
+            <li>
+              <span className="ic"><MapPin size={18} strokeWidth={1.7} /></span>
+              <div>
+                <span className="k">Location</span>
+                <span className="v">Kolhapur, India</span>
               </div>
-            </div>
-            <div className="mk-field">
-              <label htmlFor="subject">Subject</label>
-              <input id="subject" name="subject" required className="mk-input" placeholder="What can I help with?" data-testid="contact-subject" />
-            </div>
-            <div className="mk-field">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" required className="mk-textarea" placeholder="A few lines about your project, current stack, and timeline..." data-testid="contact-message" />
-            </div>
-            <button type="submit" className="btn btn-primary" data-testid="contact-submit">
-              {sent ? (
-                <>Message Sent <Sparkles size={16} /></>
-              ) : (
-                <>Send Message <ArrowRight className="arrow" size={16} /></>
-              )}
-            </button>
-          </form>
+            </li>
+            <li>
+              <span className="ic"><Sparkles size={18} strokeWidth={1.7} /></span>
+              <div>
+                <span className="k">Availability</span>
+                <span className="v">Open for project discussions</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -415,7 +380,9 @@ function Footer() {
     <footer className="mk-footer" data-testid="site-footer">
       <div className="mk-container mk-footer-inner">
         <span>© 2026 Makarand Mane. All rights reserved.</span>
-        <span>WordPress Developer • Shopify Developer • Technical Consultant</span>
+        <span className="mk-footer-versions">
+          View other versions: <Link to="/minimal">Minimal</Link> · <Link to="/sidebar">Sidebar</Link> · <Link to="/blog">Blog</Link>
+        </span>
       </div>
     </footer>
   );
