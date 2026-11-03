@@ -75,7 +75,7 @@ I'm an active part of the WordPress community in India and globally, through **c
 - 🏅 Diversity Scholarship, WordCamp Asia 2025; Yoast Care Fund recipient, 2026
 - 🎓 College workshops introducing students to PHP and WordPress
 
-### 🔌 Plugins on WordPress.org
+### 🔌 Plugins I've contributed to
 
 - **QuoteFrameShare**: blockquotes with citation, copy, and social share
 - **Contributor Photo Gallery**
