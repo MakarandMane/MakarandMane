@@ -1,20 +1,10 @@
-
-<!--
-  GitHub Profile README for Makarand Mane
-  File: README.md
-  Repo: MakarandMane/MakarandMane   (the special \"profile\" repo)
-  Replace placeholders marked with  ⟶  before publishing.
--->
-
 # 👋 Hi, I'm Makarand Mane
 
 ### WordPress Developer • Shopify Developer • Technical Consultant
 
-Welcome to my GitHub! I'm a **developer, engineer, and long-time WordPress professional** based in **Kolhapur, India**, helping businesses with WordPress development, Shopify development, website maintenance, and practical technical solutions that are **stable, clean, and maintainable**.
+Welcome to my GitHub! I'm a **long-time WordPress developer** based in **Kolhapur, India**, building with **PHP, JavaScript, HTML, and CSS** and helping businesses with WordPress development, Shopify development, website maintenance, and practical technical solutions that are **stable, clean, and maintainable**.
 
-I've been doing this since **2011** — that's **15+ years** of building, shipping, supporting, and contributing to the open-source web.
-
-Alongside client work at [WPGenius](https://wpgenius.in/), I actively contribute to the **WordPress ecosystem** through speaking, organizing, volunteering, and community events.
+I've been working with WordPress since **2011**: building, shipping, supporting, and contributing to the open-source web. Today I lead [WPGenius Solutions LLP](https://wpgenius.in/), and I actively contribute to the **WordPress ecosystem** through Core contributions, translation, speaking, and organizing WordCamps.
 
 ---
 
@@ -32,34 +22,36 @@ Alongside client work at [WPGenius](https://wpgenius.in/), I actively contribute
 - **Website:** [makarandmane.com](https://makarandmane.com/)
 - **Studio / Agency:** [wpgenius.in](https://wpgenius.in/)
 
-> 💡 *Pinned repositories below show selected open-source experiments, snippets, and plugin work.*
-
 ---
 
 ## 💼 Experience
 
-**Founder & Lead Developer**
-*[WPGenius](https://wpgenius.in/)* — 2011 to Present
+**Founder & Designated Partner**
+*[WPGenius Solutions LLP](https://wpgenius.in/)* — 2021 to Present
 
 - WordPress development, customization, and long-term maintenance for growing businesses
 - Shopify development and storefront improvements for online retailers
 - Technical consulting on architecture, performance, security, and reliability
 - Server maintenance, Proxmox setup, and infrastructure support
 
-**Technical Consultant**
-*Independent* — 2011 to Present
+**WordPress Developer**
+*Tyche Ventures* — 2018 to 2021
 
-- Audit, troubleshoot, and stabilize WordPress and Shopify sites
-- Plan and execute migrations, performance improvements, and rebuilds
-- Ongoing retainer support for teams who need a reliable technical partner
+**Freelance WordPress Developer**
+*Independent* — 2011 to 2018
+
+- Built, maintained, and supported WordPress sites for clients
+- Audited, troubleshot, and stabilized sites; planned migrations and rebuilds
+- Ongoing support for teams who needed a reliable technical partner
 
 ---
 
 ## 🧰 Core Stack
 
-- **CMS / Platforms:** WordPress, Shopify
 - **Languages:** PHP, JavaScript, jQuery, HTML, CSS
+- **CMS / Platforms:** WordPress, Shopify
 - **Databases:** MySQL
+- **Tools:** WP-CLI, Git, shell scripting
 - **Infra & Ops:** Linux server maintenance, Proxmox virtualization
 - **Practices:** Long-term maintenance, performance optimization, security hardening, clean implementation
 
@@ -67,22 +59,22 @@ Alongside client work at [WPGenius](https://wpgenius.in/), I actively contribute
 
 ## 🏆 Community & Contributions
 
-I'm an active part of the WordPress community in India and globally — through **speaking**, **organizing**, **volunteering**, and **mentoring** at meetups and WordCamps.
+I'm an active part of the WordPress community in India and globally, through **contributing**, **speaking**, **organizing**, and **mentoring**.
 
-- 🎤 Speaker & organizer at WordPress meetups and WordCamps
-- 🤝 Volunteer and contributor across WordCamp events ⟶ *list specific WordCamps (e.g., WordCamp Kolhapur, WordCamp Pune, WordCamp Asia) you'd like to highlight*
-- 🌱 Contributor on WordPress.org ⟶ *add your WordPress profile link below*
-- 📣 Long-time advocate for clean, maintainable, community-driven open source
-
-> ✏️ *Tip: replace the lines above with specific roles, years, and links once you decide which contributions you want to feature.*
+- 🧩 **WordPress Core contributor** (WordPress 6.7, 6.8, 7.0, 7.1)
+- 🌟 **All-Star Mentee**, WordPress Contributor Mentorship Program (Q4 2024)
+- 🌐 **General Translation Editor for Marathi**; led the first 100% Marathi translation of WordPress (4.5)
+- 🏕 **Lead organizer, WordCamp Kolhapur** 2025 and 2026, and Kolhapur WordPress meetups
+- 🤝 **Co-led Contributor Day at WordCamp Asia 2026**
+- 🎤 **Speaker** at WordCamps across India, including Pune, Mumbai, Nagpur, Ahmedabad, Bengaluru, Surat, Jaipur and WP Accessibility Day (Online)
+- 🎓 College workshops introducing students to PHP and WordPress
 
 ---
 
 ## 🌱 Open Source & Profiles
 
-- 🐘 **WordPress Profile:** [profiles.wordpress.org/⟶your-handle](https://profiles.wordpress.org/)
-- 🛒 **Shopify Partner Profile:** ⟶ *optional, add if public*
-- 💻 **GitHub:** [github.com/⟶your-github-username](https://github.com/)
+- 🐘 **WordPress Profile:** [profiles.wordpress.org/mkrndmane](https://profiles.wordpress.org/mkrndmane/)
+- 💻 **GitHub:** [github.com/MakarandMane](https://github.com/MakarandMane) · [github.com/wpgenius](https://github.com/wpgenius)
 
 ---
 
@@ -94,32 +86,15 @@ If you need help with **WordPress**, **Shopify**, **website maintenance**, or **
 - 🏢 **Studio:** [wpgenius.in](https://wpgenius.in/)
 - ✉️ **Email:** [makarand@wpgenius.in](mailto:makarand@wpgenius.in)
 - 📍 **Based in:** Kolhapur, India
-- 💼 **LinkedIn:** [linkedin.com/in/makarandmane](https://www.linkedin.com/)
-- 🐦 **X (Twitter):** [x.com/mkrndmane](https://x.com/)
+- 💼 **LinkedIn:** [linkedin.com/in/makarandmane](https://www.linkedin.com/in/makarandmane/)
+- 🐦 **X (Twitter):** [x.com/mkrndmane](https://x.com/mkrndmane)
 
 ---
 
 ## ⚡ Fun Fact
 
-I've been working with WordPress since **2011** — long enough to remember life before Gutenberg, custom post types as a \"new\" idea, and when \"maintenance\" was something most clients only thought about *after* something broke. Today, I help businesses skip that lesson.
+I've been working with WordPress since **2011** — long enough to remember life before Gutenberg, custom post types as a "new" idea, and when "maintenance" was something most clients only thought about *after* something broke. Today, I help businesses skip that lesson.
 
 ---
 
-## 📊 GitHub Stats
-
-<!--
-  Optional flair — uncomment and replace YOUR-USERNAME to enable.
-  These render on GitHub via github-readme-stats.
-
-<p>
-  <img src=\"https://github-readme-stats.vercel.app/api?username=YOUR-USERNAME&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&theme=default\" alt=\"Makarand's GitHub stats\" />
-  <img src=\"https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR-USERNAME&layout=compact&hide_border=true&theme=default\" alt=\"Top languages\" />
-</p>
--->
-
----
-
-Thanks for stopping by! 🙌
-Feel free to **explore my repos**, **open an issue**, or **reach out** for collaboration, consulting, or community work.
-"
-Observation: Create successful: /app/profile-readme/README.md
+Thanks for stopping by! 🙌 Feel free to explore my repos, open an issue, or **reach out** for collaboration, consulting, or community work.
