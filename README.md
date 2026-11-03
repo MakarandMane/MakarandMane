@@ -34,8 +34,8 @@ I've been working with WordPress since **2011**: building, shipping, supporting,
 - Technical consulting on architecture, performance, security, and reliability
 - Server maintenance, Proxmox setup, and infrastructure support
 
-**WordPress Developer**
-*Tyche Ventures* — 2018 to 2021
+**Sole Proprietor**
+*Tyche Ventures* — 2018 to Present
 
 **Freelance WordPress Developer**
 *Independent* — 2011 to 2018
@@ -51,7 +51,8 @@ I've been working with WordPress since **2011**: building, shipping, supporting,
 - **Languages:** PHP, JavaScript, jQuery, HTML, CSS
 - **CMS / Platforms:** WordPress, Shopify
 - **Databases:** MySQL
-- **Tools:** WP-CLI, Git, shell scripting
+- **APIs & Tools:** WordPress REST API, WP-CLI, Git, shell scripting
+- **Specialties:** LMS development, performance optimisation, maintenance, and automation
 - **Infra & Ops:** Linux server maintenance, Proxmox virtualization
 - **Practices:** Long-term maintenance, performance optimization, security hardening, clean implementation
 
@@ -61,13 +62,25 @@ I've been working with WordPress since **2011**: building, shipping, supporting,
 
 I'm an active part of the WordPress community in India and globally, through **contributing**, **speaking**, **organizing**, and **mentoring**.
 
-- 🧩 **WordPress Core contributor** (WordPress 6.7, 6.8, 7.0, 7.1)
+- 🧩 **WordPress Core contributor**: 6.7 "Rollins", 6.8 "Cecil", 7.0 "Armstrong", and 7.1
 - 🌟 **All-Star Mentee**, WordPress Contributor Mentorship Program (Q4 2024)
 - 🌐 **General Translation Editor for Marathi**; led the first 100% Marathi translation of WordPress (4.5)
-- 🏕 **Lead organizer, WordCamp Kolhapur** 2025 and 2026, and Kolhapur WordPress meetups
+- 🏕 **Lead organizer, WordCamp Kolhapur** 2025 and 2026, and Kolhapur WordPress meetups (since 2018)
+- 🏫 **Facilitator & organizer, WordPress Campus Connect Kolhapur** 2025 and 2026; WP Credits mentor
 - 🤝 **Co-led Contributor Day at WordCamp Asia 2026**
 - 🎤 **Speaker** at WordCamps across India, including Pune, Mumbai, Nagpur, Ahmedabad, Bengaluru, Surat, Jaipur and WP Accessibility Day (Online)
+- 🧭 **Table Lead** at WordCamp Bangkok, Bhopal, Rajasthan, and Bengaluru contributor days
+- 📷 **Photo Directory Moderator** (290+ photos contributed) and **Keymaster** of the Marathi support forum
+- 🧑‍🤝‍🧑 Contributor to the Core, Polyglots, Photos, Speaker, and Pattern teams
+- 🏅 Diversity Scholarship, WordCamp Asia 2025; Yoast Care Fund recipient, 2026
 - 🎓 College workshops introducing students to PHP and WordPress
+
+### 🔌 Plugins on WordPress.org
+
+- **QuoteFrameShare**: blockquotes with citation, copy, and social share
+- **Contributor Photo Gallery**
+
+See all on my [WordPress.org profile](https://profiles.wordpress.org/mkrndmane/).
 
 ---
 
